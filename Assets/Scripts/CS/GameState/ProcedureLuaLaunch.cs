@@ -20,7 +20,6 @@ namespace ZPlan
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            Log.Error("进入Lua Launch========");
             luaManager = new GameObject("LuaLaunch").AddComponent<LuaManager>();
         }
 
