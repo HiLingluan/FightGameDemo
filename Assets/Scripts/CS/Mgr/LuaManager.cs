@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 using XLua;
 
-public class LuaManager : MonoBehaviour
+
+public class LuaManager : GameFrameworkComponent
 {
     internal static LuaEnv luaEnv;
     internal static float lastGCTime = 0;
@@ -17,8 +19,9 @@ public class LuaManager : MonoBehaviour
     private Action luaLateUpdate;
     private Action luaOnDestroy;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         luaEnv = new LuaEnv();
         luaEnv.AddLoader(CustomLoader);
         luaEnv.DoString(@"
@@ -32,6 +35,8 @@ public class LuaManager : MonoBehaviour
         luaOnDestroy = luaEnv.Global.Get<Action>("OnDestroy");
         luaAwake?.Invoke();
     }
+
+
 
     void Start()
     {
