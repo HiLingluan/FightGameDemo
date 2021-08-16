@@ -13,8 +13,7 @@ namespace ZFight.Logic
 
         public Role(RoleData data)
         {
-            FsmComponent fsmComponent = GameEntry.GetComponent<FsmComponent>();
-            fsm = fsmComponent.CreateFsm(Role.FsmName, this, new IdleState(), new MoveState(), new SkillState(), new DeadState());
+            fsm = GameEntry.Fsm.CreateFsm(Role.FsmName, this, new IdleState(), new MoveState(), new SkillState(), new DeadState());
         }
 
         public void Run()

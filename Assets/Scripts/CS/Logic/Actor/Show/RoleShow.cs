@@ -27,9 +27,8 @@ namespace ZFight.Show
 
         public Role(RoleData data)
         {
-            FsmComponent fsmComponent = GameEntry.GetComponent<FsmComponent>();
-            fsm = fsmComponent.CreateFsm(Role.FsmName, this, new IdleState(), new MoveState(),new SkillState(),new DeadState());
-            moveFsm = fsmComponent.CreateFsm(Role.MoveFsmName, this, new AnyState(), new MoveState(), new JumpState(), new FollowState(),new RotationToState());
+            fsm = GameEntry.Fsm.CreateFsm(Role.FsmName, this, new IdleState(), new MoveState(),new SkillState(),new DeadState());
+            moveFsm = GameEntry.Fsm.CreateFsm(Role.MoveFsmName, this, new AnyState(), new MoveState(), new JumpState(), new FollowState(),new RotationToState());
         }
 
         public void Run()
