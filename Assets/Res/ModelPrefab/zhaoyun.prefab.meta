@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: 1090581f24c13794430e058bbe5256f1
-timeCreated: 1547460513
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/zhaoyun
+  assetBundleVariant: 

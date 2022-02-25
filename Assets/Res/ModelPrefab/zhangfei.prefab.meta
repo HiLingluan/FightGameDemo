@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: fd372c5a6915629141855fdaa6f4b1e4
-timeCreated: 1547460512
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/zhangfei
+  assetBundleVariant: 

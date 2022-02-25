@@ -16,21 +16,31 @@ namespace ZFight
 {
     public class ProcedureLuaLaunch : ProcedureBase
     {
-        LuaManager luaManager;
 
         public override bool UseNativeDialog => throw new NotImplementedException();
+
+        protected override void OnInit(ProcedureOwner procedureOwner)
+        {
+            base.OnInit(procedureOwner);
+            GameEntry.Lua = new GameObject("LuaLaunch").AddComponent<LuaManager>();
+        }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            luaManager = new GameObject("LuaLaunch").AddComponent<LuaManager>();
+            GameEntry.Lua.Init();
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
+        }
 
-
+        protected override void OnLeave(ProcedureOwner procedureOwner,bool isShutDown)
+        {
+            base.OnLeave(procedureOwner,isShutDown);
+            //销毁,释放Lua
+            GameEntry.Lua.Dispose();
         }
     
     }

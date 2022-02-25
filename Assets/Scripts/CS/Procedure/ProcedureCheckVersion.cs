@@ -7,6 +7,9 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace ZFight
 {
+    /// <summary>
+    /// 版本检查流程
+    /// </summary>
     public class ProcedureCheckVersion : ProcedureBase
     {
         private bool m_CheckVersionComplete = false;
@@ -33,7 +36,9 @@ namespace ZFight
             GameEntry.Event.Subscribe(WebRequestFailureEventArgs.EventId, OnWebRequestFailure);
 
             // 向服务器请求版本信息
-            GameEntry.WebRequest.AddWebRequest(Utility.Text.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, GetPlatformPath()), this);
+            string fullCheckVersionUrl = Utility.Text.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, GetPlatformPath());
+            Log.Debug(fullCheckVersionUrl);
+            GameEntry.WebRequest.AddWebRequest(fullCheckVersionUrl, this);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

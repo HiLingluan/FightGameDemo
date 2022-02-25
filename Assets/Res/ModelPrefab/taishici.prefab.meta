@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: fca185bafd92deb94336f55ee16e2685
-timeCreated: 1547460510
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/taishici
+  assetBundleVariant: 

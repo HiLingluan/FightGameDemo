@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: c983f985e2058a9042b0bfa7cca2cecf
-timeCreated: 1547460510
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/xiahoudun
+  assetBundleVariant: 

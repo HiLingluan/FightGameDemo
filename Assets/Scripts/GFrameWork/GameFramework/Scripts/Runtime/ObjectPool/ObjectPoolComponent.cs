@@ -50,6 +50,7 @@ namespace UnityGameFramework.Runtime
 
         private void Start()
         {
+
         }
 
         /// <summary>

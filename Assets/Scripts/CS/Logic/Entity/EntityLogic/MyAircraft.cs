@@ -42,15 +42,15 @@ namespace ZFight
                 return;
             }
 
-            ScrollableBackground sceneBackground = FindObjectOfType<ScrollableBackground>();
-            if (sceneBackground == null)
-            {
-                Log.Warning("Can not find scene background.");
-                return;
-            }
+            //ScrollableBackground sceneBackground = FindObjectOfType<ScrollableBackground>();
+            //if (sceneBackground == null)
+            //{
+            //    Log.Warning("Can not find scene background.");
+            //    return;
+            //}
 
-            m_PlayerMoveBoundary = new Rect(sceneBackground.PlayerMoveBoundary.bounds.min.x, sceneBackground.PlayerMoveBoundary.bounds.min.z,
-                sceneBackground.PlayerMoveBoundary.bounds.size.x, sceneBackground.PlayerMoveBoundary.bounds.size.z);
+            //m_PlayerMoveBoundary = new Rect(sceneBackground.PlayerMoveBoundary.bounds.min.x, sceneBackground.PlayerMoveBoundary.bounds.min.z,
+            //    sceneBackground.PlayerMoveBoundary.bounds.size.x, sceneBackground.PlayerMoveBoundary.bounds.size.z);
         }
 
 #if UNITY_2017_3_OR_NEWER

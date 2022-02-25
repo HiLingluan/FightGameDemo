@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: ea2836bb003e63a248853ba7550dfa02
-timeCreated: 1547460507
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/lusu
+  assetBundleVariant: 

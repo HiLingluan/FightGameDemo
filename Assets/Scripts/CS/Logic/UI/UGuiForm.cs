@@ -56,7 +56,7 @@ namespace ZFight
             }
         }
 
-        public void PlayUISound(int uiSoundId)
+        public void PlayUISound(int uiSoundId) 
         {
             GameEntry.Sound.PlayUISound(uiSoundId);
         }

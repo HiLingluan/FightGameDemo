@@ -11,6 +11,9 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace ZFight
 {
+    /// <summary>
+    /// 更新流程
+    /// </summary>
     public class ProcedureUpdateVersion : ProcedureBase
     {
         private bool m_UpdateVersionComplete = false;

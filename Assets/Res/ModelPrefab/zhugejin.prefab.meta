@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: ba9bd206fb3efd974e44b0f6d0827dbd
-timeCreated: 1547460514
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/zhugejin
+  assetBundleVariant: 

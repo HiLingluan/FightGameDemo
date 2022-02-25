@@ -12,6 +12,7 @@ using GameFramework.ObjectPool;
 using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime
@@ -1453,6 +1454,27 @@ namespace UnityGameFramework.Runtime
         private void OnResourceUpdateAllComplete(object sender, GameFramework.Resource.ResourceUpdateAllCompleteEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateAllCompleteEventArgs.Create(e));
+        }
+
+        public void LoadBytes(string abName, LoadBytesCallbacks callback, object userdata)
+        {
+            if(ResourceMode == ResourceMode.Package)
+            {
+                m_ResourceHelper.LoadBytes(Utility.Path.GetRemotePath(Path.Combine(ReadOnlyPath, abName + ".dat")), callback, userdata);
+            }
+            else
+            {
+                m_ResourceHelper.LoadBytes(Utility.Path.GetRemotePath(Path.Combine(ReadWritePath, abName + ".dat")), callback, userdata);
+            }
+
+            //if (ResourceMode == ResourceMode.Updatable)
+            //{
+            //    m_ResourceHelper.LoadBytes(Utility.Path.GetRemotePath(Path.Combine(ReadWritePath, abName + ".dat")), callback, userdata);
+            //}
+            //else if (ResourceMode == ResourceMode.Package)
+            //{
+            //    m_ResourceHelper.LoadBytes(Utility.Path.GetRemotePath(Path.Combine(ReadOnlyPath, abName + ".dat")), callback, userdata);
+            //}
         }
     }
 }

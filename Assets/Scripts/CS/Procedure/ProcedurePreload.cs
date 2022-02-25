@@ -8,8 +8,14 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace ZFight
 {
+    /// <summary>
+    /// 预加载资源流程
+    /// </summary>
     public class ProcedurePreload : ProcedureBase
     {
+        /// <summary>
+        /// 数据节点列表
+        /// </summary>
         public static readonly string[] DataTableNames = new string[]
         {
             "Aircraft",
@@ -71,7 +77,6 @@ namespace ZFight
             {
                 if (!loadedFlag.Value)
                 {
-                    Log.Debug("========="+loadedFlag.Key);
                     return;
                 }
             }
@@ -97,28 +102,40 @@ namespace ZFight
             // Preload fonts
             LoadFont("MainFont");
         }
-
+        /// <summary>
+        /// 加载配置
+        /// </summary>
+        /// <param name="configName"></param>
         private void LoadConfig(string configName)
         {
             string configAssetName = AssetUtility.GetConfigAsset(configName, false);
             m_LoadedFlag.Add(configAssetName, false);
             GameEntry.Config.ReadData(configAssetName, this);
         }
-
+        /// <summary>
+        /// 加载数据表
+        /// </summary>
+        /// <param name="dataTableName"></param>
         private void LoadDataTable(string dataTableName)
         {
             string dataTableAssetName = AssetUtility.GetDataTableAsset(dataTableName, false);
             m_LoadedFlag.Add(dataTableAssetName, false);
             GameEntry.DataTable.LoadDataTable(dataTableName, dataTableAssetName, this);
         }
-
+        /// <summary>
+        /// 本地化配置
+        /// </summary>
+        /// <param name="dictionaryName"></param>
         private void LoadDictionary(string dictionaryName)
         {
             string dictionaryAssetName = AssetUtility.GetDictionaryAsset(dictionaryName, false);
             m_LoadedFlag.Add(dictionaryAssetName, false);
             GameEntry.Localization.ReadData(dictionaryAssetName, this);
         }
-
+        /// <summary>
+        /// 加载字体
+        /// </summary>
+        /// <param name="fontName"></param>
         private void LoadFont(string fontName)
         {
             m_LoadedFlag.Add(Utility.Text.Format("Font.{0}", fontName), false);

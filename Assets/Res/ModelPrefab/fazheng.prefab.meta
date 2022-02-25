@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: ef3a027c9a0bbaa04b6b75cdbeb06bea
-timeCreated: 1547460504
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/fazheng
+  assetBundleVariant: 

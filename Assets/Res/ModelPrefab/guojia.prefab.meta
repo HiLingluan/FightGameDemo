@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: 03954d7e5d84509e4e550c00f3e20da0
-timeCreated: 1547460505
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/guojia
+  assetBundleVariant: 

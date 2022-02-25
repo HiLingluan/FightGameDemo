@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: 9eb5f710514b94bd4f9871c4f4e44eba
-timeCreated: 1547460510
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/sunshangxiang
+  assetBundleVariant: 

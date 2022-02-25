@@ -12,6 +12,9 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace ZFight
 {
+    /// <summary>
+    /// 切换场景流程
+    /// </summary>
     public class ProcedureChangeScene : ProcedureBase
     {
         private const int MenuSceneId = 1;
@@ -59,6 +62,7 @@ namespace ZFight
 
             int sceneId = procedureOwner.GetData<VarInt32>("NextSceneId");
             m_ChangeToMenu = sceneId == MenuSceneId;
+            //此处解析可以重写 改成符合使用的方式 Json
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
             DRScene drScene = dtScene.GetDataRow(sceneId);
             if (drScene == null)
@@ -66,7 +70,7 @@ namespace ZFight
                 Log.Warning("Can not load scene '{0}' from data table.", sceneId.ToString());
                 return;
             }
-
+            //从配置表获取场景名称并加载
             GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
             m_BackgroundMusicId = drScene.BackgroundMusicId;
         }
@@ -90,13 +94,14 @@ namespace ZFight
                 return;
             }
 
-            if (m_ChangeToMenu)
+            if (m_ChangeToMenu) 
             {
                 ChangeState<ProcedureMenu>(procedureOwner);
             }
             else
             {
                 ChangeState<ProcedureMain>(procedureOwner);
+               // ChangeState<ProcedureLuaLaunch>(procedureOwner);
             }
         }
 
@@ -112,6 +117,7 @@ namespace ZFight
 
             if (m_BackgroundMusicId > 0)
             {
+                //播放背景音乐
                 GameEntry.Sound.PlayMusic(m_BackgroundMusicId);
             }
 

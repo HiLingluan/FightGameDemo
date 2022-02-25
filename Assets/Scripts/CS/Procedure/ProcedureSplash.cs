@@ -28,22 +28,22 @@ namespace ZFight
             // TODO: 这里可以播放一个 Splash 动画
             // ...
 
+            // 编辑器模式
             if (GameEntry.Base.EditorResourceMode)
             {
-                // 编辑器模式
-                Log.Info("Editor resource mode detected.");
+                Log.Info("Editor resource mode run");
                 ChangeState<ProcedurePreload>(procedureOwner);
             }
+            // 单机模式
             else if (GameEntry.Resource.ResourceMode == ResourceMode.Package)
             {
-                // 单机模式
-                Log.Info("Package resource mode detected.");
+
+                Log.Info("Package resource mode run");
                 ChangeState<ProcedureInitResources>(procedureOwner);
             }
-            else
+            else // 可更新模式
             {
-                // 可更新模式
-                Log.Info("Updatable resource mode detected.");
+                Log.Info("Updatable resource mode run");
                 ChangeState<ProcedureCheckVersion>(procedureOwner);
             }
         }

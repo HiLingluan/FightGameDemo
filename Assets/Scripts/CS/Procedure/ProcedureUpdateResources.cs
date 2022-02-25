@@ -98,6 +98,7 @@ namespace ZFight
 
             Log.Info("Start update resources...");
             GameEntry.Resource.UpdateResources(OnUpdateResourcesComplete);
+            //GameEntry.Resource.UpdateResources("Base",OnUpdateResourcesComplete);
         }
 
         private void RefreshProgress()

@@ -1,10 +1,7 @@
 fileFormatVersion: 2
 guid: 4bc836122f821aba4666a105b96d3949
-timeCreated: 1547460507
-licenseType: Free
-NativeFormatImporter:
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  userData: 
+  assetBundleName: modelprefab/liuchan
+  assetBundleVariant: 

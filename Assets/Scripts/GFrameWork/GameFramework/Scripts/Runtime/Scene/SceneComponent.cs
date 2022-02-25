@@ -107,6 +107,7 @@ namespace UnityGameFramework.Runtime
             }
             else
             {
+                //设置资源加载代理
                 m_SceneManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
             }
         }

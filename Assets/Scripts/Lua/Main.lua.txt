@@ -1,0 +1,24 @@
+local loginMediator = require "LoginMediator"
+require "GlobalType"
+--//---------------------------------------
+
+function Start()
+    print("Main============= 1111111Start")
+    loginMediator:Test()
+end
+
+function Update()
+    print("Main============= Update")
+end
+
+function LateUpdate()
+    print("Main============= LateUpdate")
+end
+
+function OnDestroy()
+    
+end
+
+
+
+Start()
