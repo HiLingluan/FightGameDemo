@@ -470,7 +470,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public bool AssignAsset(string guid, string name, string variant)
         {
-            if (string.IsNullOrEmpty(guid)) 
+            if (string.IsNullOrEmpty(guid))
             {
                 return false;
             }
@@ -574,7 +574,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         private bool IsAvailableResourceName(string name, string variant, Resource current)
         {
             Resource found = GetResource(name, variant);
-            if (found != null && found != current)   
+            if (found != null && found != current)
             {
                 return false;
             }

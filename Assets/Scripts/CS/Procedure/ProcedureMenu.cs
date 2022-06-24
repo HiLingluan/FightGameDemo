@@ -60,8 +60,7 @@ namespace ZFight
             {
                 //procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
                 //procedureOwner.SetData<VarByte>("GameMode", (byte)GameMode.Normal);
-                //ChangeState<ProcedureChangeScene>(procedureOwner);
-                ChangeState<ProcedureLuaLaunch>(procedureOwner);
+                ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }
 

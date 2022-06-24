@@ -72,7 +72,8 @@ namespace ZFight
             }
             //从配置表获取场景名称并加载
             GameEntry.Scene.LoadScene(AssetUtility.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
-            m_BackgroundMusicId = drScene.BackgroundMusicId;
+            //m_BackgroundMusicId = drScene.BackgroundMusicId;
+            m_BackgroundMusicId = 2;
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -118,7 +119,7 @@ namespace ZFight
             if (m_BackgroundMusicId > 0)
             {
                 //播放背景音乐
-                GameEntry.Sound.PlayMusic(m_BackgroundMusicId);
+                TestConfig.musicID = GameEntry.Sound.PlayMusic(m_BackgroundMusicId);
             }
 
             m_IsChangeSceneComplete = true;

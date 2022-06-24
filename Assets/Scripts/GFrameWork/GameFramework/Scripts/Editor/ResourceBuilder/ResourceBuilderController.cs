@@ -360,7 +360,8 @@ namespace UnityGameFramework.Editor.ResourceTools
                     switch (xmlNode.Name)
                     {
                         case "InternalResourceVersion":
-                            InternalResourceVersion = int.Parse(xmlNode.InnerText) + 1;
+                            //InternalResourceVersion = int.Parse(xmlNode.InnerText) + 1;
+                            InternalResourceVersion = int.Parse(xmlNode.InnerText);
                             break;
 
                         case "Platforms":

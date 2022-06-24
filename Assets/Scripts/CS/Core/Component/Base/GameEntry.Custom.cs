@@ -25,12 +25,6 @@ namespace ZFight
             get;
             private set;
         }
-        
-        public static LuaManager Lua
-        {
-            get;
-            set;
-        }
 
         private static void InitCustomComponents()
         {
